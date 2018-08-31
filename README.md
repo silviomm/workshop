@@ -4,10 +4,9 @@
 Projeto criado por @silviomm e @danielartini, em nome da DevMob(Grupo de Extensão de Desenvolvimento Mobile da UFRJ) para ministrar o workshop de Ionic 3 durante a Semana da Computação 2018.
 
 ## O Projeto - Agenda de Contatos
+Aplicativo para criação, edição, remoção e listagem dos contatos do servidor.
 
 ![Alt text](/server/public/images/crud.png?raw=true)
-
-Aplicativo para criação, edição, remoção e listagem dos contatos do servidor.
 
 ### Pré-requisitos
 
