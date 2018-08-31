@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Formulário
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Nome</ion-label>
+        <ion-input type="text" name="nome" [(ngModel)]="contato.nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Telefone</ion-label>
+        <ion-input type="text" name="telefone" [(ngModel)]="contato.telefone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Descrição</ion-label>
+        <ion-input type="text" name="descricao" [(ngModel)]="contato.descricao"></ion-input>
+      </ion-item>
+
+      <ion-item hidden></ion-item>
+
+    </ion-list>
+
+    <button ion-button block (click)="salvar()">Salvar</button>
+
+  </ion-content>
