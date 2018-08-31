@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController, AlertController } from 'ionic-angular';
 import { Contato } from '../../models/contato';
 import { ContatoServiceProvider } from '../../providers/contato-service/contato-service';
 
@@ -11,16 +11,34 @@ export class HomePage {
 
   contatos: Contato[] = [];
 
-  constructor(public navCtrl: NavController, private _contatoService: ContatoServiceProvider) {}
+  constructor(public navCtrl: NavController, private _contatoService: ContatoServiceProvider, private _loadingCtrl: LoadingController, private _alertCtrl: AlertController) {}
 
   ionViewDidEnter() {
     this.getContatos();
   }
 
   getContatos() {
-    this._contatoService.lista().subscribe(contatos => {
-      this.contatos = contatos;
+    let loading = this._loadingCtrl.create({
+      content: 'Carregando...'
     });
+
+    loading.present();
+
+    this._contatoService.lista().subscribe(
+      (contatos) => {
+        this.contatos = contatos;
+        loading.dismiss();
+      },
+      (err) => {
+        loading.dismiss();
+        this._alertCtrl.create({
+          title: 'Falha na conexão',
+          subTitle: 'Não foi possível carregar os contatos. Tente novamente mais tarde!',
+          buttons: [
+            { text: 'Ok' }
+          ]
+        }).present();
+      });
   }
 
   adicionarContato() {
@@ -35,7 +53,9 @@ export class HomePage {
   }
 
   removerContato(contato: Contato) {
-    //Remove o contato
+    this._contatoService.remove(contato).subscribe(contatos => {
+      this.contatos = contatos;
+    });
   }
 
 }

@@ -36,4 +36,14 @@ module.exports = function(app){
 
             res.status(200).json(contato);  
         });
+
+    app.route(`${BASE_URL}/remove`)
+        .post((req, res) => {
+            logService.logRequestRecebida(`${BASE_URL}/remove`, 'POST');
+
+            let contato = req.body;
+            var contatos = contatoDAO.remove(contato);
+
+            res.status(200).json(contatos);
+        });
 }

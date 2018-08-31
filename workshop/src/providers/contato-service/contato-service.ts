@@ -23,4 +23,9 @@ export class ContatoServiceProvider {
   public insere(contato: Contato): Observable<Contato> {
     return this.http.post<Contato>(`${this.CONTATO_API}/novo`, contato);
   }
+
+  public remove(contato: Contato): Observable<Array<Contato>> {
+    return this.http.post<Array<Contato>>(`${this.CONTATO_API}/remove`, contato);
+  }
+
 }

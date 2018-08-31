@@ -33,6 +33,17 @@ module.exports = {
         aux.descricao = contato.descricao;
         aux.telefone = contato.telefone;
     },
+
+    remove: function(contato){
+        let novos = [];
+        contatos.forEach(c => {
+            if(c.id != contato.id){
+                novos.push(c);
+            }
+        });
+        contatos = novos;
+        return contatos;
+    }
 };
 
 let contatos = [
