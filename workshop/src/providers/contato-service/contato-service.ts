@@ -16,11 +16,11 @@ export class ContatoServiceProvider {
     return this.http.get<Array<Contato>>(`${this.CONTATO_API}/lista`);
   }
 
-  public edita(): Observable<Contato> {
-    return this.http.get<Contato>(`${this.CONTATO_API}/edita`);
+  public edita(contato: Contato): Observable<Contato> {
+    return this.http.post<Contato>(`${this.CONTATO_API}/edita`, contato);
   }
 
-  public insere(): Observable<Contato> {
-    return this.http.get<Contato>(`${this.CONTATO_API}/novo`);
+  public insere(contato: Contato): Observable<Contato> {
+    return this.http.post<Contato>(`${this.CONTATO_API}/novo`, contato);
   }
 }

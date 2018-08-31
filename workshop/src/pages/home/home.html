@@ -10,7 +10,7 @@
   <ion-list>
     <ion-item-sliding *ngFor="let contato of contatos">
 
-      <button ion-item (click)="editarContato(contato.id)">
+      <button ion-item (click)="editarContato(contato)">
         <h1>{{ contato.nome }}</h1>
         <h2>{{ contato.telefone }}</h2>
         <h2>{{ contato.descricao }}</h2>

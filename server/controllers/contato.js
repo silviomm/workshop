@@ -27,7 +27,7 @@ module.exports = function(app){
 
     app.route(`${BASE_URL}/edita`)
         .post((req, res) => {
-            logService.logRequestRecebida(`${BASE_URL}/novo`, 'POST');
+            logService.logRequestRecebida(`${BASE_URL}/edita`, 'POST');
 
             let contato = req.body;
             if(contatoDAO.getById(contato.id) !== 'undefined') {

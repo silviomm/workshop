@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ContatoServiceProvider } from '../providers/contato-service/contato-service';
+import { HttpClientModule } from '@angular/common/http';
+import { ContatoPage } from '../pages/contato/contato';
+import { ContatoPageModule } from '../pages/contato/contato.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { ContatoServiceProvider } from '../providers/contato-service/contato-ser
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    ContatoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
