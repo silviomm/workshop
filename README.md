@@ -1,7 +1,7 @@
 # Workshop Ionic 3
 ## Semana da Computação 2018 - UFRJ
 
-Projeto criado por @silviomm e @danielartini, em nome da DevMob(Grupo de Extensão de Desenvolvimento Mobile da UFRJ) para ministrar o workshop de Ionic 3 durante a Semana da Computação 2018.
+Projeto criado por [@silviomm](https://github.com/silviomm) e [@danielartine](https://github.com/danielartine), em nome da [DevMob](https://github.com/devmobufrj)(Grupo de Extensão de Desenvolvimento Mobile da UFRJ) para ministrar o workshop de Ionic 3 durante a Semana da Computação 2018.
 
 ## O Projeto - Agenda de Contatos
 Aplicativo para criação, edição, remoção e listagem dos contatos do servidor.
@@ -27,7 +27,7 @@ npm install
 npm start
 ```
 
-E deverá aparecer **Servidor iniciado em http://localhost:3000**
+E deverá aparecer `Servidor iniciado em http://localhost:3000`
 
 - Em outro terminal, entrar na pasta **/app** e rodar:
 
