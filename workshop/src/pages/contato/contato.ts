@@ -10,16 +10,19 @@ import { ContatoServiceProvider } from '../../providers/contato-service/contato-
 })
 export class ContatoPage {
 
-  contato: Contato = <Contato>{};
+  public contato: Contato = <Contato>{};
   public isEdit: boolean;
+  public titulo: string = '';
 
   constructor(
     public navCtrl: NavController, public navParams: NavParams, private _contatoService: ContatoServiceProvider) {
     if (this.navParams.data.contato) {
       this.contato = this.navParams.data.contato;
       this.isEdit = true;
+      this.titulo = 'Editar Contato';
     }
     else {
+      this.titulo = 'Novo Contato';
       this.isEdit = false;
     }
   }
