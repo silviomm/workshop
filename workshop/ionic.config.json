@@ -1,0 +1,7 @@
+{
+  "name": "workshop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

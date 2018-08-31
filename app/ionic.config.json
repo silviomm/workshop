@@ -1,7 +1,0 @@
-{
-  "name": "Agenda de Contatos",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
